@@ -1,0 +1,25 @@
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+__pycache__/
+
+# Datasets (Except the golden set)
+twcs/
+twcs.csv
+sample.csv
+apple_support_pairs.csv
+golden_150.json
+golden_set_unlabelled.csv
+
+# Output results (Optional, but good to ignore so users generate their own)
+eval_results.csv
+eval_results_with_judge.csv
+
+# IDEs
+.vscode/
+.idea/

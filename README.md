@@ -120,15 +120,7 @@ While a **91% Intent Accuracy** and a **4.0/5.0 Reply Quality** look phenomenal 
 
 ---
 
-## 🔮 5. What I'd do next with one more week
-
-1. **RAG Integration for Known Outages:** I would implement a lightweight vector database (like Chroma or FAISS) loaded with current Apple Support articles. Instead of generic DM requests, the agent could perform semantic search to provide exact troubleshooting steps (e.g., "Reset Network Settings").
-2. **Confidence Thresholding:** I'd modify the agent to return a probability confidence score. Tickets scoring below 85% confidence would automatically bypass the auto-reply system and route to human QA.
-3. **Streamlit Human-in-the-Loop Dashboard:** Build a simple frontend where human agents can view a feed of drafted replies and click "Approve" or "Edit", allowing the system to collect RLHF (Reinforcement Learning from Human Feedback) data to fine-tune a smaller, cheaper model.
-
----
-
-## 🧠 6. Decision Log (Non-Obvious Engineering Decisions)
+## 🔮 5. Decision Log (Non-Obvious Engineering Decisions)
 
 1. **Targeted AppleSupport:** Decided to filter the 3M row dataset to a single brand. Apple has highly structured hardware/software intents, making classification more objective than airlines or retail brands where sentiment is heavily blurred.
 2. **Ignored Mid-Thread Context:** Decided to process only "root" tweets (where `in_response_to_tweet_id` is NaN). Coreference resolution in multi-turn Twitter threads is extremely noisy; focusing on first-touch triage provides the highest business value.
